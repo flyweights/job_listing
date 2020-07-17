@@ -1,11 +1,5 @@
 <h1> Edit a job </h1>
-<% if @job.errors.any? %>
-  <ul>
-    <% @job.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
+<%= render 'common/formerror', locals:{object: @job} %>
 <%= simple_form_for @job do |f| %>
   <%= f.input :title %>
   <%= f.input :description %>
