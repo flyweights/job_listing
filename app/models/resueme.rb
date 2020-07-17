@@ -1,0 +1,2 @@
+class Resueme < ApplicationRecord
+end
